@@ -38,6 +38,8 @@ public class FullBodyFPController : MonoBehaviour
 
     void Awake()
     {
+        if (animator == null) animator = GetComponentInChildren<Animator>();
+
         cc = GetComponent<CharacterController>();
         yaw = transform.eulerAngles.y;
         Cursor.lockState = CursorLockMode.Locked;
